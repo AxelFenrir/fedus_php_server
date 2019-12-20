@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    font-family: 'Roboto', sans-serif;  
+    /* Способ разметки */
+    box-sizing: border-box;
+    /* Все эелементы будут 16 пикселей */
+    font-size: 16px;
+}
+
+body{
+    background-color: rgb(74, 0, 255);
+}
+
+header{
+    text-align: center;
+    
+}
+header h1{
+    font-size: 2em;
+}
+
+.container{
+        /* text-align: center; */
+        width: 100%;
+        /* 10пикселей с верху снизу; справа, слева - авто */
+        margin: 10px auto;
+}
+
+.container input, .answer {
+    display: inline-block;
+    border-radius: 4px;
+    border-width: 0.1em;
+    border-style: solid;
+    height: 2em;
+}
+
+.container input {
+    width: 39%;
+    margin-right: 1%;
+    border-color: #FF0000;
+    vertical-align: top;
+    padding: 5px;
+    outline: none;
+    box-shadow: 2px 3px 14px 0px #087eff;
+}
+.container input:hover{
+    border-color: black;
+}
+.container input:focus:not(.wrong-regex){
+    border-color: blue;
+}
+.answer {
+    width: 20%;
+    border: 2px solid black;
+    line-height: 1.8em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    
+    
+}
+.not-right{
+    background-color: #FF0004;
+    border-color: #F7FF00;
+}
+.right {
+    background-color: #3AFF00;
+    border-color: #F7FF00;
+}
+#regex.wrong-regex{
+    border-color: #FF09E2;
+}
+.visible {
+    position: relative;
+    animation-name: move;
+    animation-duration: 5s;
+    /* animation-timing-function: cubic-bezier(ease-out); */
+    animation-fill-mode: both;
+}
+@keyframes move{
+    from{
+        top:100px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 400px){
+    *{
+        font-size: 24px;
+    }
+    .container{
+        width: 95%;
+    }
+    .container input, .answer{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
