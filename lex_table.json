@@ -1,0 +1,61 @@
+{
+  "indentation": {
+    "regex": "^(\s+)",
+    "skip": true
+  },
+  "keywords": {
+    "regex": "^([a-z]{2,})\b",
+    "list": {
+      "self": [
+        "public", "echo", "function", "class", "new", "return", "instanceof", "if",
+        "else", "in", "for", "when", "while", "foreach", "extends", "protected", "static",      "private", "get"
+      ],
+      "logic_operator": ["and", "or"]
+    }
+  },
+  "ident": {
+    "regex": "^\$?(([a-zA-Z]\w*)|(_\w+)|(_?\w+_\w+)*)\b",
+    "link": "arrayOfIdent",
+    "name": "ident" 
+  },
+  "digit_const": {
+    "regex": "^(\d+)(\.\d+){0,1}\b",
+    "link": "arrayOfConst",
+    "name": "digit_const" 
+  },
+  "string_const": {
+    "regex": "^(\$){0,1}((\"(.*?)\")|(\'(.*?)\'))",
+    "link": "arrayOfConst",
+    "name": "string_const" 
+  },
+  "one_line_comment": {
+    "regex": "\/\/(.*)\n",
+    "skip": true
+  },
+  "multi_line_comment": {
+    "regex": "\/\*([\s\S]*?)\*\/",
+    "skip": true
+  },  
+  "operators": {
+    "regex": "^(((<->)|(=>))|([-_=+\*\/\|%>:<]){1,2})",
+    "list": {
+      "self": [":="],
+      "comparison_operator": [">=", "<=", "<>", "=", ">", "<"],
+      "plus_minus": ["+", "-"],
+      "mult_div": ["*", "/", "%"],
+      "inc_dec": ["++", "--"],
+      "exchange": ["<->"],
+      "match_variant": ["|", "=>", "_"]
+    }
+  },
+  "type":{
+    "regex": "^: \w+((\[.*?\])|(\(.*?\))){0,1}",
+    "skip": true
+  },
+  "separators": {
+    "regex": "([\[\])(:,;.}{]{1})",
+    "list": {
+      "self": ["(", ")", ";", ":", ",", ".", "{", "}","[","]"]
+    }
+  }
+}

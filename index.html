@@ -1,24 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kirill</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transpiler</title>
+
+  <script src="./transpiler.min.js"></script>
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./js/script.js"></script>
+
+  <script type="text/php" src="./php/test.php"></script>
 </head>
 <body>
-    <!--header>h1 -->
-    <header>
-        <!--Menu: nav>ul>li*5>lorem1 -->
-        <h1>Привет
-		</h1>
-        <!-- p>lorem10 -->
-        <p></p>
-    </header>
-   
-    
-</body>
+  <header>
+    <h1>Regexp test</h1>
+  </header>
+  <div class="container">
+    <input type="text" id="regex" placeholder="Type regexp here"><input type="text" name="text" placeholder="Type text here"><div class="answer not-right">
+        Not right
+    </div>
+  </div>
 
+  <script type="text/typescript">
+    console.log('code from script');
+  </script>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
 </html>
